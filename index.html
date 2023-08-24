@@ -25,7 +25,12 @@
         <h1>Mariana & Badri</h1>
         <p>Akan Melangsungkan Resepsi Pernikahan dalam:</p>
         <div class="simply-countdown"></div>
-        <a href="#home" class="btn btn-lg mt-4">Lihat Undangan</a>
+        <audio id="myAudio">
+          <source src="music/bestPart.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <a href="#home" class="btn btn-lg mt-4" onclick="playMusic(event)">Lihat Undangan</a>
+        
       </main>
     </section>
 
@@ -333,5 +338,14 @@
 
       <!-- library lighbox -->
       <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+
+      <!-- script untuk paly music -->
+      <script>
+        function playMusic(event) {
+          var audio = document.getElementById("myAudio");
+          audio.play();
+        }
+      </script>
+      
   </body>
 </html>
